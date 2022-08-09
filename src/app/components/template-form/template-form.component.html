@@ -1,0 +1,10 @@
+<h2 class="text-center">{{title}}</h2>
+<form class="formgroup" #form="ngForm" (ngSubmit)="onSubmit()">
+  <label for="username">Enter User Name</label>
+  <input class="form-control" type="text" id="username" required >
+  <label for="password">Enter User Passwaord</label>
+  <input class="form-control" type="password" id="password" required >
+  <button type="submit" [disabled]="!form['form'].valid">
+    Submit
+  </button>
+</form>
